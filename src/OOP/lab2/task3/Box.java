@@ -23,18 +23,18 @@ public class Box {
         depth = value3;
     }
 
-    public void Display() {
+    public void display() {
         System.out.println("The sizes of the box: \n" +
                 "Height = " + height + "\n" +
                 "Width = " + width + "\n" +
                 "Depth = " + depth );
     }
 
-    double SurfaceArea() {
+    double getSurfaceArea() {
         return 2 * (height * width + height * depth + width * depth);
     }
 
-    double Volume () {
+    double getVolume() {
         return height * width * depth;
     }
 }

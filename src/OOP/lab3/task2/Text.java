@@ -10,7 +10,7 @@ public class Text {
         this.text = text;
     }
 
-    public int GetNumberOfLetters() {
+    public int getNumberOfLetters() {
         String regex = "\\w";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(text);
@@ -23,7 +23,7 @@ public class Text {
         return counter;
     }
 
-    public int GetNumberOfVowels() {
+    public int getNumberOfVowels() {
         String regex = "[aeiou]"; // Vowels without Y and W
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(text);
@@ -36,7 +36,7 @@ public class Text {
         return counter;
     }
 
-    public int GetNumberOfConsonants() {
+    public int getNumberOfConsonants() {
         String regex = "([^aeiou\\W])";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(text);

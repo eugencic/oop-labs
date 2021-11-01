@@ -6,17 +6,17 @@ public class Task2 {
         Queue q1 = new Queue();
         Queue q2 = new Queue(3);
 
-        q1.Pop();
-        q1.Push(1);
-        q1.Push(2);
-        q1.Push(3);
-        q1.Pop();
-        q1.Print();
+        q1.pop();
+        q1.push(1);
+        q1.push(2);
+        q1.push(3);
+        q1.pop();
+        q1.print();
 
-        q2.Push(1);
-        q2.Push(2);
-        q2.Push(3);
-        q2.Pop();
-        q2.Print();
+        q2.push(1);
+        q2.push(2);
+        q2.push(3);
+        q2.pop();
+        q2.print();
     }
 }

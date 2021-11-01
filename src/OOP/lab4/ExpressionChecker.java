@@ -3,7 +3,7 @@ package OOP.lab4;
 import java.util.Stack;
 
 public class ExpressionChecker {
-    public static String BracketChecker(String str) {
+    public static String checkBrackets(String str) {
         if (str.isEmpty()) return "The expression is empty";
         Stack<Character> stack = new Stack<Character>();
         for (char chr : str.toCharArray()) {

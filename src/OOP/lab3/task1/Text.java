@@ -7,11 +7,11 @@ public class Text {
         this.text = text;
     }
 
-    public int GetNumberOfSentences() {
+    public int getNumberOfSentences() {
         return text.split("([a-z]*)([.?!])([\\s+])").length;
     }
 
-    public int GetNumberOfWords() {
+    public int getNumberOfWords() {
         return text.split(" ").length;
     }
 }

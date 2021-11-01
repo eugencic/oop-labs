@@ -1,8 +1,8 @@
 package OOP.lab2.task3;
 
 public class Queue {
-    int QueueSize;
-    int MaxSize;
+    int queueSize;
+    int maxSize;
     Node front, rear;
 
     //Linked list node
@@ -15,58 +15,58 @@ public class Queue {
     public Queue() {
         front = null;
         rear = null;
-        QueueSize = 0;
-        MaxSize = -1;
+        queueSize = 0;
+        maxSize = -1;
     }
 
     //Constructor with parameter
     public Queue(int value1) {
         front = null;
         rear = null;
-        QueueSize = 0;
-        MaxSize = value1;
+        queueSize = 0;
+        maxSize = value1;
     }
 
     //Remove item from the front of the queue.
-    void Pop() {
-        if (QueueSize > 0) {
+    void pop() {
+        if (queueSize > 0) {
             System.out.println("Element " + front.data + " removed from the queue");
             front = front.next;
-            QueueSize--;
+            queueSize--;
         } else System.out.println("The queue is empty yet");
     }
 
     //Add item at the rear of the queue.
-    void Push(int data) {
-        if (QueueSize < MaxSize || MaxSize == -1) {
-            Node OldRear = rear;
+    void push(int data) {
+        if (queueSize < maxSize || maxSize == -1) {
+            Node oldRear = rear;
             rear = new Node();
             rear.data = data;
             rear.next = null;
-            if (QueueSize > 0) {
-                OldRear.next = rear;
+            if (queueSize > 0) {
+                oldRear.next = rear;
             } else front = rear;
-            QueueSize++;
+            queueSize++;
             System.out.println("Element " + data + " added to the queue");
         } else System.out.println("The queue is already full");
     }
 
     //Print the queue
-    void Print() {
-        Node FirstNode = front;
+    void print() {
+        Node firstNode = front;
         System.out.println("The queue is ");
-        if (FirstNode == null) {
+        if (firstNode == null) {
             System.out.println("empty");
         }
-        while (FirstNode != null) {
-            System.out.println(FirstNode.data);
-            FirstNode = FirstNode.next;
+        while (firstNode != null) {
+            System.out.println(firstNode.data);
+            firstNode = firstNode.next;
         }
     }
 
     //Check if the queue is empty
-    boolean IsEmpty() {
-        if (QueueSize == 0) {
+    boolean checkIsEmpty() {
+        if (queueSize == 0) {
             System.out.println("The queue is empty");
             return true;
         } else {
@@ -76,13 +76,13 @@ public class Queue {
     }
 
     //Check if the queue is full
-    boolean IsFull() {
-        if (MaxSize == -1) {
+    boolean checkIsFull() {
+        if (maxSize == -1) {
             System.out.println("The queue will never be full");
             return false;
         }
 
-        if (QueueSize < MaxSize) {
+        if (queueSize < maxSize) {
             System.out.println("The queue is not full yet");
             return false;
         }

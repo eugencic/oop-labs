@@ -9,15 +9,15 @@ public class Text {
         this.text = text;
     }
 
-    List<Word> WordList = new ArrayList<>();
+    List<Word> wordList = new ArrayList<>();
 
-    public void TopFiveWords() {
+    public void getTopFiveWords() {
         String regex = "\\W+";
         String[] words = text.split(regex);
         for (String word1:words) {
-            Word NewWord = new Word(word1);
-            if (Collections.frequency(WordList, NewWord) == 0) {
-                WordList.add(NewWord);
+            Word newWord = new Word(word1);
+            if (Collections.frequency(wordList, newWord) == 0) {
+                wordList.add(newWord);
                 int count = 0;
                 for (String word2:words) {
                     if (word1.equals(word2)) {
@@ -25,17 +25,17 @@ public class Text {
                     }
                 }
 
-                NewWord.SetNum(count);
+                newWord.setNum(count);
             }
         }
 
-        Collections.sort(WordList, new Comparator<Word>() {
+        Collections.sort(wordList, new Comparator<Word>() {
             @Override
             public int compare(Word o1, Word o2) {
-                if (o1.GetNum() > o2.GetNum()) {
+                if (o1.getNum() > o2.getNum()) {
                     return -1;
                 }
-                else if (o2.GetNum() > o1.GetNum()) {
+                else if (o2.getNum() > o1.getNum()) {
                     return 1;
                 }
                 else {
@@ -45,11 +45,11 @@ public class Text {
         });
 
         for (int i = 0; i < 5; i++) {
-            System.out.println(WordList.get(i).GetWord() + " - appears " + WordList.get(i).GetNum() + " times.");
+            System.out.println(wordList.get(i).getWord() + " - appears " + wordList.get(i).getNum() + " times.");
         }
     }
 
-    public String GetLongestWord() {
+    public String getLongestWord() {
         String regex = "\\W+";
         String[] words = text.split(regex);
         String longest = "";

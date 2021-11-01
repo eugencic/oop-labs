@@ -5,8 +5,8 @@ public class Task1 {
         Box box1 = new Box();
         Box box2 = new Box(2);
         Box box3 = new Box(3,4,5);
-        box1.Display();
-        box2.Display();
-        box3.Display();
+        box1.display();
+        box2.display();
+        box3.display();
     }
 }

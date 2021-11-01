@@ -8,15 +8,15 @@ public class Word {
         this.word = word;
     }
 
-    public String GetWord() {
+    public String getWord() {
         return word;
     }
 
-    public int GetNum() {
+    public int getNum() {
         return num;
     }
 
-    public void SetNum(int num) {
+    public void setNum(int num) {
         this.num = num;
     }
 
@@ -24,7 +24,7 @@ public class Word {
     public boolean equals(Object obj) {
         if (obj instanceof Word) {
             Word w2 = (Word) obj;
-            return this.word.toLowerCase().equals(w2.GetWord().toLowerCase());
+            return this.word.toLowerCase().equals(w2.getWord().toLowerCase());
         }
         else {
             return false;
