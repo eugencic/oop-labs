@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oop.lab9.Controller">
+    <TextField fx:id="first_operand" style="-fx-font-size: 20" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <Text style="-fx-font-size: 20" GridPane.columnIndex="1" GridPane.rowIndex="0"> &#160; / &#160; </Text>
+    <TextField fx:id="second_operand" style="-fx-font-size: 20" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+    <Text style="-fx-font-size: 20" GridPane.columnIndex="3" GridPane.rowIndex="0"> &#160; = &#160; </Text>
+    <TextField fx:id="result" style="-fx-font-size: 20" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+
+    <BorderPane GridPane.columnIndex="4" GridPane.rowIndex="1">
+        <left>
+            <Button fx:id="calculate" onMouseClicked="#handleButton" style="-fx-font-size: 20" > &#160; Calculate &#160; </Button>
+        </left>
+        <right>
+            <Button fx:id="clear" onMouseClicked="#handleClear" style="-fx-font-size: 20" > &#160; Clear &#160; </Button>
+        </right>
+    </BorderPane>
+
+</GridPane>
